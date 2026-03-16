@@ -1,0 +1,301 @@
+<style>
+.f6-wrap{font-family:Arial,sans-serif;background:#F8F5FF;color:#1A0A2E;line-height:1.7;font-size:15px;max-width:900px;margin:0 auto;}
+.f6-hero{background:linear-gradient(135deg,#5B2D8E 0%,#3D1A6E 60%,#1A0A3D 100%);color:#fff;padding:40px 28px 32px;border-radius:12px;margin-bottom:20px;}
+.f6-hero h1{font-size:24px;font-weight:900;margin:0 0 10px;}
+.f6-hero h1 span{color:#D4AAFF;}
+.f6-hero p{font-size:13px;color:rgba(255,255,255,.82);margin:0;}
+.f6-badge{display:inline-block;background:rgba(212,170,255,.2);border:1px solid rgba(212,170,255,.4);color:#D4AAFF;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:30px;margin-bottom:14px;}
+.f6-meta{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;}
+.f6-meta span{font-size:12px;color:rgba(255,255,255,.82);}
+.f6-card{background:#fff;border:1px solid #E0D0FF;border-radius:12px;padding:24px;margin-bottom:18px;box-shadow:0 2px 12px rgba(91,45,142,.08);}
+.f6-card-title{font-size:16px;font-weight:900;color:#5B2D8E;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.f6-card-title .ico{font-size:26px;}
+.f6-highlight{background:linear-gradient(135deg,#5B2D8E,#3D1A6E);color:#fff;border-radius:12px;padding:20px 24px;margin-bottom:18px;}
+.f6-highlight h3{font-size:15px;font-weight:700;color:#D4AAFF;margin:0 0 8px;}
+.f6-highlight p{font-size:13px;color:rgba(255,255,255,.87);margin:0;line-height:1.7;}
+.f6-alert{border-radius:10px;padding:14px 18px;margin-bottom:16px;display:flex;gap:12px;align-items:flex-start;font-size:13px;}
+.f6-alert-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.f6-alert.purple{background:#F0E8FF;border:1px solid #C8A8FF;color:#3D1A6E;}
+.f6-alert.yellow{background:#FFFBEB;border:1px solid #F7E6B8;color:#6C4A1A;}
+.f6-alert.green{background:#EDFAF3;border:1px solid #B8F0D3;color:#1A5C3A;}
+.f6-alert strong{font-weight:700;display:block;margin-bottom:3px;}
+.f6-paso-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:18px;}
+.f6-paso{display:flex;align-items:flex-start;gap:14px;background:#F8F5FF;border:1px solid #E0D0FF;border-radius:10px;padding:14px 16px;}
+.f6-paso-num{width:38px;height:38px;border-radius:50%;background:#5B2D8E;color:#fff;font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.f6-paso h4{font-size:13px;font-weight:700;color:#5B2D8E;margin:0 0 4px;}
+.f6-paso p{font-size:13px;color:#2A1A3E;margin:0;line-height:1.6;}
+.f6-preguntas{display:flex;flex-direction:column;gap:12px;margin-bottom:18px;}
+.f6-pregunta{background:#fff;border-left:5px solid #5B2D8E;border-top:1px solid #E0D0FF;border-right:1px solid #E0D0FF;border-bottom:1px solid #E0D0FF;border-radius:0 10px 10px 0;padding:16px 18px;}
+.f6-pregunta .num{display:inline-block;background:#5B2D8E;color:#fff;font-size:11px;font-weight:900;padding:3px 10px;border-radius:20px;margin-bottom:8px;}
+.f6-pregunta p{font-size:14px;font-weight:700;color:#1A0A2E;margin:0 0 6px;line-height:1.5;}
+.f6-pregunta .hint{font-size:12px;color:#7A5A9E;font-style:italic;margin:0;}
+.f6-ejemplo{background:#FAF7FF;border:1px dashed #5B2D8E;border-radius:10px;padding:16px 18px;margin-bottom:16px;}
+.f6-ejemplo-title{font-size:12px;font-weight:700;color:#5B2D8E;text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;}
+.f6-ejemplo-msg{background:#fff;border:1px solid #E0D0FF;border-radius:8px;padding:13px 15px;font-size:13px;color:#2A1A3E;line-height:1.65;}
+.f6-ejemplo-autor{font-size:11px;color:#7A5A9E;font-weight:700;margin-bottom:6px;}
+.f6-divider{height:1px;background:#E0D0FF;margin:20px 0;}
+.f6-cierre{background:linear-gradient(135deg,#5B2D8E,#3D1A6E);border-radius:12px;padding:20px 24px;text-align:center;margin-top:6px;}
+.f6-cierre h3{font-size:16px;font-weight:900;color:#D4AAFF;margin:0 0 8px;}
+.f6-cierre p{font-size:13px;color:rgba(255,255,255,.9);margin:0;line-height:1.65;}
+/* ══ ACTIVIDAD INTERACTIVA ══ */
+.act6-wrap{background:#fff;border:1px solid #E0D0FF;border-radius:12px;padding:24px;margin-bottom:18px;box-shadow:0 2px 12px rgba(91,45,142,.08);}
+.act6-title{font-size:16px;font-weight:900;color:#5B2D8E;margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+.act6-subtitle{font-size:13px;color:#3D1A6E;margin-bottom:18px;}
+.vf6-item{background:#F8F5FF;border:1px solid #E0D0FF;border-radius:10px;padding:15px 18px;margin-bottom:10px;}
+.vf6-item p{font-size:14px;font-weight:600;color:#1A0A2E;margin:0 0 10px;}
+.vf6-btns{display:flex;gap:8px;}
+.vf6-btn{padding:8px 20px;border-radius:8px;border:2px solid #E0D0FF;background:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;color:#2A1A3E;}
+.vf6-btn:hover{border-color:#5B2D8E;}
+.vf6-btn.ok{background:#EDFAF3;border-color:#1A8C5B;color:#1A5C3A;pointer-events:none;}
+.vf6-btn.no{background:#FFEBEB;border-color:#D40000;color:#7A1A1A;pointer-events:none;}
+.vf6-btn.dis{pointer-events:none;opacity:.55;}
+.vf6-fb{font-size:12px;font-weight:700;margin-top:8px;display:none;}
+.vf6-fb.show{display:block;}
+.act6-result{border-radius:10px;padding:13px 16px;margin-top:14px;font-size:13px;display:none;}
+.act6-result.show{display:block;}
+.act6-result.ok{background:#EDFAF3;border:1px solid #B8F0D3;color:#1A5C3A;}
+.act6-result.no{background:#FFEBEB;border:1px solid #F7B8B8;color:#7A1A1A;}
+.comp6-opt{background:#F0E8FF;border:1px solid #E0D0FF;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:700;color:#3D1A6E;cursor:pointer;transition:all .2s;}
+.comp6-opt:hover{background:#5B2D8E;color:#fff;border-color:#5B2D8E;}
+.comp6-opt.used{opacity:.35;pointer-events:none;}
+.comp6-opt.sel{background:#5B2D8E;color:#fff;border-color:#5B2D8E;}
+.comp6-blank{display:inline-block;border-bottom:2px solid #5B2D8E;min-width:120px;text-align:center;cursor:pointer;padding:2px 8px;border-radius:4px;background:#F0E8FF;font-weight:700;color:#5B2D8E;font-size:13px;transition:all .2s;}
+.comp6-blank:hover{background:#5B2D8E;color:#fff;}
+.comp6-blank.filled-ok{background:#EDFAF3;border-color:#1A8C5B;color:#1A5C3A;cursor:default;}
+.comp6-blank.filled-no{background:#FFEBEB;border-color:#D40000;color:#7A1A1A;cursor:default;}
+</style>
+
+<div class="f6-wrap">
+
+<!-- HERO -->
+<div class="f6-hero">
+  <div class="f6-badge">🧠 Unidad 6 · Inteligencia Emocional</div>
+  <h1>🗣️ Foro de Reflexión: <span>Relaciones Laborales</span></h1>
+  <p>Como instructor vial, trabajar en equipo y mantener relaciones saludables con tus colegas es tan importante como tu habilidad al volante. Este foro explora uno de los pilares de la Unidad 6 — las relaciones laborales — desde tu propia experiencia en el entorno de trabajo.</p>
+  <div class="f6-meta">
+    <span>📅 Actividad obligatoria</span>
+    <span>🎯 Unidad 6 — Subtema: Relaciones Laborales</span>
+    <span>🏆 100 puntos</span>
+  </div>
+</div>
+
+<!-- INTRODUCCIÓN -->
+<div class="f6-card">
+  <div class="f6-card-title"><span class="ico">📖</span> Introducción</div>
+  <div class="f6-highlight">
+    <h3>💜 ¿Por qué importan las relaciones laborales en la formación vial?</h3>
+    <p>Un equipo de instructores que se comunica bien, se apoya y resuelve los conflictos con madurez emocional trabaja mejor, se estresa menos y forma conductores de mayor calidad. La inteligencia emocional no se aplica solo dentro del vehículo — también se vive en la sala de espera, en las reuniones de equipo y en el trato diario con los compañeros.</p>
+  </div>
+  <div class="f6-alert purple">
+    <span class="f6-alert-icon">💡</span>
+    <div><strong>El ambiente laboral también es responsabilidad de cada instructor</strong>
+    Un buen compañero de trabajo no solo cumple con sus horarios — también reconoce el mérito ajeno, habla directamente cuando hay un problema y evita alimentar rumores o conflictos innecesarios. Estas actitudes construyen equipos fuertes y espacios de trabajo sanos.</div>
+  </div>
+</div>
+
+<!-- INSTRUCCIONES -->
+<div class="f6-card">
+  <div class="f6-card-title"><span class="ico">📋</span> Instrucciones de Participación</div>
+  <div class="f6-alert yellow">
+    <span class="f6-alert-icon">⚠️</span>
+    <div><strong>Antes de participar, lee las instrucciones</strong>
+    Sigue los pasos en orden para que tu participación sea válida y aporte valor a la reflexión del grupo.</div>
+  </div>
+  <div class="f6-paso-grid">
+    <div class="f6-paso">
+      <div class="f6-paso-num">1</div>
+      <div><h4>Completa la actividad interactiva</h4><p>Antes de escribir en el foro, realiza la actividad de la siguiente sección. Te ayudará a conectar los conceptos con tu experiencia real.</p></div>
+    </div>
+    <div class="f6-paso">
+      <div class="f6-paso-num">2</div>
+      <div><h4>Responde al menos UNA pregunta del foro</h4><p>Elige la que más conecte con tu vivencia como instructor. Tu respuesta debe ser reflexiva y tener un mínimo de <strong>5 líneas</strong>.</p></div>
+    </div>
+    <div class="f6-paso">
+      <div class="f6-paso-num">3</div>
+      <div><h4>Comenta la participación de al menos UN compañero</h4><p>Deja un comentario constructivo que aporte, complemente o invite a reflexionar. Un simple "de acuerdo" no cuenta.</p></div>
+    </div>
+    <div class="f6-paso">
+      <div class="f6-paso-num">4</div>
+      <div><h4>Usa un lenguaje respetuoso y profesional</h4><p>Este foro habla de relaciones laborales — practiquemos lo que aprendemos. Todas las experiencias son válidas.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ACTIVIDAD INTERACTIVA -->
+<div class="act6-wrap">
+  <div class="act6-title"><span style="font-size:26px;">🎯</span> Actividad Interactiva — Antes de participar</div>
+  <p class="act6-subtitle">Completa las dos actividades para repasar los conceptos clave de relaciones laborales antes de escribir en el foro.</p>
+
+  <!-- VERDADERO O FALSO -->
+  <p style="font-size:13px;font-weight:700;color:#5B2D8E;margin:0 0 10px;">✅ Parte 1 — Verdadero o Falso</p>
+
+  <div class="vf6-item">
+    <p>Si tienes un conflicto con un compañero, lo más inteligente emocionalmente es hablar directamente con esa persona en el momento y lugar adecuados.</p>
+    <div class="vf6-btns">
+      <button class="vf6-btn" onclick="vf6Ans(this,1,true,true)">✅ Verdadero</button>
+      <button class="vf6-btn" onclick="vf6Ans(this,1,false,true)">❌ Falso</button>
+    </div>
+    <div class="vf6-fb" id="vf6-fb1"></div>
+  </div>
+
+  <div class="vf6-item">
+    <p>El chisme y los rumores entre compañeros de trabajo son inofensivos si no llegan a oídos de la persona afectada.</p>
+    <div class="vf6-btns">
+      <button class="vf6-btn" onclick="vf6Ans(this,2,true,false)">✅ Verdadero</button>
+      <button class="vf6-btn" onclick="vf6Ans(this,2,false,false)">❌ Falso</button>
+    </div>
+    <div class="vf6-fb" id="vf6-fb2"></div>
+  </div>
+
+  <div class="vf6-item">
+    <p>Reconocer y felicitar el buen trabajo de un colega fortalece el ambiente laboral y la confianza del equipo.</p>
+    <div class="vf6-btns">
+      <button class="vf6-btn" onclick="vf6Ans(this,3,true,true)">✅ Verdadero</button>
+      <button class="vf6-btn" onclick="vf6Ans(this,3,false,true)">❌ Falso</button>
+    </div>
+    <div class="vf6-fb" id="vf6-fb3"></div>
+  </div>
+
+  <div class="act6-result" id="vf6-result"></div>
+
+  <div style="height:1px;background:#E0D0FF;margin:20px 0;"></div>
+
+  <!-- COMPLETAR PALABRAS -->
+  <p style="font-size:13px;font-weight:700;color:#5B2D8E;margin:0 0 4px;">✏️ Parte 2 — Completa las frases</p>
+  <p style="font-size:12px;color:#9A7ABE;margin-bottom:14px;">Haz clic en una palabra del banco y luego en el espacio en blanco donde corresponde.</p>
+
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;" id="comp6Options">
+    <span class="comp6-opt" onclick="sel6Word(this,'asertiva')">💬 asertiva</span>
+    <span class="comp6-opt" onclick="sel6Word(this,'confianza')">🤝 confianza</span>
+    <span class="comp6-opt" onclick="sel6Word(this,'respeto')">💜 respeto</span>
+  </div>
+
+  <div style="font-size:14px;color:#1A0A2E;line-height:2.4;margin-bottom:10px;">
+    1. La comunicación <span class="comp6-blank" id="b6-1" data-answer="asertiva" onclick="fill6Blank('b6-1')">— clic aquí —</span> permite expresar lo que pensamos con respeto, escuchando también al otro.
+  </div>
+  <div style="font-size:14px;color:#1A0A2E;line-height:2.4;margin-bottom:10px;">
+    2. Cumplir los acuerdos y ser puntual son formas concretas de construir <span class="comp6-blank" id="b6-2" data-answer="confianza" onclick="fill6Blank('b6-2')">— clic aquí —</span> entre los miembros del equipo.
+  </div>
+  <div style="font-size:14px;color:#1A0A2E;line-height:2.4;margin-bottom:16px;">
+    3. El <span class="comp6-blank" id="b6-3" data-answer="respeto" onclick="fill6Blank('b6-3')">— clic aquí —</span> mutuo es la base de cualquier relación laboral saludable y productiva.
+  </div>
+
+  <button style="background:#fff;color:#5B2D8E;border:2px solid #5B2D8E;border-radius:9px;padding:8px 20px;font-size:12px;font-weight:700;cursor:pointer;" onclick="reset6Comp()">🔄 Reiniciar</button>
+  <div class="act6-result" id="comp6-result"></div>
+</div>
+
+<!-- DESARROLLO DEL FORO -->
+<div class="f6-card">
+  <div class="f6-card-title"><span class="ico">💬</span> Desarrollo del Foro de Reflexión</div>
+  <p style="font-size:13.5px;color:#2A1A3E;line-height:1.75;margin-bottom:18px;">Elige la pregunta que más conecte con tu experiencia y respóndela de forma reflexiva. No necesitas responderlas todas.</p>
+
+  <div class="f6-preguntas">
+    <div class="f6-pregunta">
+      <span class="num">Pregunta 1</span>
+      <p>🤝 ¿Has vivido alguna situación de conflicto con un compañero de trabajo? ¿Cómo la manejaste? ¿Qué harías diferente hoy con lo que has aprendido sobre inteligencia emocional?</p>
+      <p class="hint">💡 No hace falta revelar nombres ni detalles privados — lo valioso es la reflexión sobre cómo actuaste y cómo creciste.</p>
+    </div>
+    <div class="f6-pregunta">
+      <span class="num">Pregunta 2</span>
+      <p>👥 ¿Qué actitud o hábito de un compañero de trabajo valoras más y por qué? ¿Qué comportamientos crees que hacen más fuerte a un equipo de instructores?</p>
+      <p class="hint">💡 Piensa en lo que admiras de quienes trabajan bien en equipo — puntualidad, honestidad, apoyo, buen humor...</p>
+    </div>
+    <div class="f6-pregunta">
+      <span class="num">Pregunta 3</span>
+      <p>💬 ¿Cómo reaccionas cuando un colega critica tu forma de enseñar o tu método de trabajo? ¿Lo ves como un ataque o como una oportunidad de mejorar? ¿Qué te ayudaría a recibir mejor ese tipo de comentarios?</p>
+      <p class="hint">💡 Recibir retroalimentación de los compañeros también requiere inteligencia emocional.</p>
+    </div>
+  </div>
+
+  <div class="f6-divider"></div>
+
+  <p style="font-size:14px;font-weight:700;color:#5B2D8E;margin:0 0 10px;">✍️ Ejemplo de una participación de calidad</p>
+  <div class="f6-ejemplo">
+    <div class="f6-ejemplo-title">📄 Ejemplo orientativo — no copiar</div>
+    <div class="f6-ejemplo-msg">
+      <div class="f6-ejemplo-autor">👥 Mi experiencia · Instructor Ejemplo</div>
+      <p style="margin:0;font-size:13px;color:#2A1A3E;line-height:1.7;">Respondiendo a la Pregunta 2: Lo que más valoro de mis compañeros es la puntualidad y la disposición a ayudar sin que se lo pidas. Tengo un colega que siempre está dispuesto a cubrir una clase en caso de emergencia y eso genera mucha tranquilidad en el equipo. Creo que los equipos fuertes se construyen con pequeñas acciones cotidianas — cumplir lo que se promete, decir las cosas de frente y celebrar los logros de los demás. He aprendido que cuando el ambiente laboral es bueno, las clases también salen mejor porque uno llega con más energía y motivación.</p>
+    </div>
+  </div>
+
+  <div class="f6-alert green">
+    <span class="f6-alert-icon">✅</span>
+    <div><strong>¿Qué hace una buena participación?</strong>
+    Responde directamente la pregunta elegida · Comparte una experiencia concreta · Reflexiona con honestidad · Usa lenguaje respetuoso · Aporta algo que tus compañeros puedan aplicar.</div>
+  </div>
+</div>
+
+<!-- CIERRE -->
+<div class="f6-cierre">
+  <h3>💜 ¡Tu voz construye el equipo!</h3>
+  <p>Las relaciones laborales saludables no ocurren solas — se construyen con decisiones conscientes cada día. Este foro es una oportunidad para reflexionar, compartir y crecer juntos como equipo de instructores. ¡Mucho ánimo y a participar! 🌟</p>
+</div>
+
+</div>
+
+<script>
+var vf6Done={},vf6Score=0;
+var vf6Msgs={
+  1:{ok:'✅ Correcto. Hablar directamente con la persona involucrada es siempre la acción más honesta e inteligente.',no:'❌ Falso. Hablar directamente con el colega en el momento y lugar apropiados es la respuesta más inteligente.'},
+  2:{ok:'✅ Correcto. Los rumores siempre generan desconfianza y dañan el ambiente, aunque no lleguen a la persona.',no:'❌ Falso. El chisme y los rumores destruyen la confianza del equipo aunque no lleguen a oídos del afectado.'},
+  3:{ok:'✅ Correcto. Reconocer el mérito de los compañeros fortalece la confianza y mejora el ambiente laboral.',no:'❌ Falso. Reconocer el buen trabajo de un colega sí fortalece el equipo — no es debilidad, es inteligencia emocional.'}
+};
+function vf6Ans(btn,n,chosen,correct){
+  if(vf6Done[n])return;
+  vf6Done[n]=true;
+  btn.closest('.vf6-item').querySelectorAll('.vf6-btn').forEach(function(b){b.classList.add('dis');});
+  var ok=(chosen===correct);
+  if(ok)vf6Score++;
+  btn.classList.remove('dis');
+  btn.classList.add(ok?'ok':'no');
+  var fb=document.getElementById('vf6-fb'+n);
+  fb.classList.add('show');
+  fb.style.color=ok?'#1A5C3A':'#7A1A1A';
+  fb.textContent=ok?vf6Msgs[n].ok:vf6Msgs[n].no;
+  if(Object.keys(vf6Done).length===3){
+    var r=document.getElementById('vf6-result');
+    r.className='act6-result show '+(vf6Score>=2?'ok':'no');
+    r.innerHTML=vf6Score===3?'✅ ¡Perfecto! Respondiste correctamente las 3 afirmaciones.':vf6Score===2?'✅ Muy bien — 2 de 3 correctas. Repasa la que falló.':'⚠️ Te recomendamos repasar el subtema de Relaciones Laborales en la Unidad 6.';
+  }
+}
+var sel6Word=null,filled6={};
+function sel6Word(el,word){
+  document.querySelectorAll('.comp6-opt').forEach(function(o){o.classList.remove('sel');});
+  sel6Word=word;
+  el.classList.add('sel');
+}
+function fill6Blank(id){
+  if(!sel6Word)return;
+  var blank=document.getElementById(id);
+  if(blank.classList.contains('filled-ok'))return;
+  var ok=(sel6Word===blank.dataset.answer);
+  if(ok){
+    blank.textContent=sel6Word;
+    blank.classList.add('filled-ok');
+    document.querySelectorAll('.comp6-opt').forEach(function(o){
+      if(o.textContent.includes(sel6Word)){o.classList.add('used');o.classList.remove('sel');}
+    });
+    filled6[id]=true;
+    sel6Word=null;
+    if(Object.keys(filled6).length===3){
+      var r=document.getElementById('comp6-result');
+      r.className='act6-result show ok';
+      r.innerHTML='✅ ¡Excelente! Completaste correctamente las 3 frases. Ya estás listo para participar en el foro.';
+    }
+  } else {
+    blank.classList.add('filled-no');
+    blank.textContent=sel6Word;
+    setTimeout(function(){blank.classList.remove('filled-no');blank.textContent='— clic aquí —';},700);
+  }
+}
+function reset6Comp(){
+  ['b6-1','b6-2','b6-3'].forEach(function(id){
+    var b=document.getElementById(id);
+    b.textContent='— clic aquí —';
+    b.className='comp6-blank';
+  });
+  document.querySelectorAll('.comp6-opt').forEach(function(o){o.classList.remove('used','sel');});
+  filled6={};sel6Word=null;
+  document.getElementById('comp6-result').className='act6-result';
+}
+</script>
